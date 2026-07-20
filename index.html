@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handy AI Solver</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Handy AI</h1>
+            <p>Run <code>python app.py</code>, allow camera access, and use hand gestures to write a math problem.</p>
+        </header>
+
+        <div class="main-content">
+            <div class="video-container">
+                <video id="videoElement" class="video-frame" autoplay playsinline muted></video>
+                <img id="frameImage" class="video-frame" src="" alt="Processed camera feed" style="display:none;">
+            </div>
+
+            <div class="controls">
+                <div class="info-box">
+                    <div class="info-label">Hand Gestures</div>
+                    <div class="gesture-info">
+                        <strong>✍️ Index Only:</strong> Write mode<br>
+                        <strong>✋ Thumb + Index:</strong> Pause<br>
+                        <strong>✊ Closed Fist:</strong> Clear canvas<br>
+                        <strong>🖐️ All Fingers:</strong> Solve problem
+                    </div>
+                </div>
+
+                <button id="clearBtn">Clear Canvas</button>
+
+                <div class="status inactive" id="status">
+                    Connecting to app.py backend...
+                </div>
+            </div>
+        </div>
+
+        <div class="output-container">
+            <div class="output-title">AI Response</div>
+            <div class="output-content" id="outputArea"></div>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
