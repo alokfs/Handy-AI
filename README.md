@@ -1,4 +1,4 @@
-Run website: https://handy-ai2.netlify.app/
+Run website: https://alokfs.github.io/Handy-AI/
 
 Project Spotlight: Handy AI – Where Art Meets Math 🎨📐
 I'm excited to share a project I've been working on called Handy AI — a fusion of art and artificial intelligence that mimics hand drawing using Neural Network Programming (NNP) and OpenCV (cv2) in Python.
