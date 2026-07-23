@@ -15,6 +15,11 @@ I'm excited to share a project I've been working on called Handy AI — a fusion
 I’d love to hear your thoughts or suggestions! Open to feedback, collaborations, or just a chat with fellow AI and tech enthusiasts.
 
 
+
+https://github.com/user-attachments/assets/50b8e820-1dd4-4631-8785-bca9bf91237f
+
+
+
 ## Project Overview
 
 Handy AI leverages the power of:
