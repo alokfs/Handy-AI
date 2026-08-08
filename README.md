@@ -20,8 +20,12 @@ Handy AI uses a **webcam and MediaPipe Hand Landmarker** to detect hand movement
 💡 **Why I built it**
 
 I wanted to explore how AI and computer vision can create a more natural way for humans to interact with technology.
-
 Instead of simply recognizing an image or classifying a gesture, **Handy AI turns human movement into an interactive digital experience** — connecting physical gestures with drawing, mathematics, and AI reasoning.
+
+https://github.com/user-attachments/assets/3301297b-be53-41bf-92fb-6dd28e24ea80
+
+
+
 
 🧠 **Technology Stack**
 
