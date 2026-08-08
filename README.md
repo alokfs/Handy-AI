@@ -26,11 +26,13 @@ Instead of simply recognizing an image or classifying a gesture, **Handy AI turn
 
 https://github.com/user-attachments/assets/3301297b-be53-41bf-92fb-6dd28e24ea80
 
-
-
+🔐 How to use it
+Open the website.
+Add your Gemini API key first.
+Start the camera and begin drawing.
+Then enjoy the full Handy AI experience.
 
 🧠 **Technology Stack**
-
 • HTML
 • CSS
 • JavaScript
@@ -41,13 +43,8 @@ https://github.com/user-attachments/assets/3301297b-be53-41bf-92fb-6dd28e24ea80
 • Static Web Architecture
 
 🔐 **Privacy & Security**
-
 Hand tracking is performed locally in the browser, and the project does not contain a hard-coded production API key. Users provide their own Gemini API key, which is kept in `sessionStorage` for the active browser tab.
-
 This project is part of my journey toward building **AI systems that understand and interact with humans more naturally.**
-
 I'd love to hear your thoughts, suggestions, or ideas for improving Handy AI! 🚀
-
 Open to **feedback, collaboration, and conversations with fellow AI, computer vision, and technology enthusiasts.**
-
 #HandyAI #ArtificialIntelligence #ComputerVision #AI #MachineLearning #MediaPipe #GeminiAI #JavaScript #WebDevelopment #HumanComputerInteraction #Innovation #TechProject
