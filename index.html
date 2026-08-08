@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A browser-only hand-gesture math whiteboard.">
+    <title>Handy AI — Hand Gesture Math Solver</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="hero">
+            <p class="eyebrow">Browser-only hand drawing</p>
+            <h1>Handy AI</h1>
+            <p class="hero-copy">Write a math problem in the air with your hand, then ask to solve it. Hand tracking runs on this device.</p>
+        </header>
+
+        <section class="workspace" aria-label="Handy AI workspace">
+            <div class="board-card">
+                <div class="board-header">
+                    <div>
+                        <p class="section-label">Live whiteboard</p>
+                        <p id="boardHint" class="board-hint">Start the camera to begin.</p>
+                    </div>
+                    <span id="cameraIndicator" class="camera-indicator" aria-live="polite">Camera off</span>
+                </div>
+
+                <div class="canvas-wrap">
+                    <video id="videoElement" autoplay playsinline muted aria-hidden="true"></video>
+                    <canvas id="drawingCanvas" aria-label="Live camera whiteboard"></canvas>
+                    <div id="canvasMessage" class="canvas-message">Press “Start camera” and allow access.</div>
+                </div>
+            </div>
+
+            <aside class="control-panel" aria-label="Controls">
+                <section class="control-section">
+                    <p class="section-label">Gestures</p>
+                    <ul class="gesture-list">
+                        <li><span class="gesture-icon">☝</span><span><strong>Index finger</strong><small>Write</small></span></li>
+                        <li><span class="gesture-icon">✌</span><span><strong>Thumb + index</strong><small>Pause</small></span></li>
+                        <li><span class="gesture-icon">✊</span><span><strong>Closed fist</strong><small>Clear the drawing</small></span></li>
+                        <li><span class="gesture-icon">🖐</span><span><strong>Open palm</strong><small>Hold to solve</small></span></li>
+                    </ul>
+                </section>
+
+                <section class="control-section key-section">
+                    <label for="apiKeyInput">Gemini API key <span>(optional)</span></label>
+                    <div class="key-row">
+                        <input id="apiKeyInput" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your own key">
+                        <button id="toggleKeyBtn" class="icon-button" type="button" aria-label="Show API key">Show</button>
+                    </div>
+                    <p class="key-help">Kept only for this browser tab. It is sent directly to Gemini when you solve.</p>
+                </section>
+
+                <div class="button-grid">
+                    <button id="startBtn" class="button primary" type="button">Start camera</button>
+                    <button id="solveBtn" class="button secondary" type="button" disabled>Solve drawing</button>
+                    <button id="clearBtn" class="button ghost" type="button" disabled>Clear drawing</button>
+                </div>
+
+                <p id="status" class="status" role="status" aria-live="polite">Loading the app…</p>
+            </aside>
+        </section>
+
+        <section class="response-card" aria-labelledby="responseTitle">
+            <div class="response-header">
+                <div>
+                    <p class="section-label">AI response</p>
+                    <h2 id="responseTitle">Solution</h2>
+                </div>
+                <span id="solveState" class="solve-state">Ready when you are</span>
+            </div>
+            <pre id="outputArea" class="output-content">Your worked solution will appear here.</pre>
+        </section>
+    </main>
+
+    <script type="module" src="static/script.js"></script>
+</body>
+</html>
